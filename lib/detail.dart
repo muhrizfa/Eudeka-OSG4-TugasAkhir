@@ -28,10 +28,6 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    var marketInfo = Container(
-      child: Text("data"),
-    );
-
     var basicInfo = Container(
       padding: EdgeInsets.all(20),
       child: Column(
@@ -127,13 +123,6 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      Text(
-                        'Level ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
                     ],
                   ),
                 ),
@@ -161,8 +150,168 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         fontWeight: FontWeight.w300,
                       ),
                     ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Description ',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                Text(
+                  "${widget.cardinfo.desc}",
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+
+    var marketInfo = Container(
+      padding: EdgeInsets.all(20),
+      child: Column(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
                     Text(
-                      "${widget.cardinfo.level}",
+                      'Card Market Price ',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    Text(
+                      'TCG Player Price ',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    Text(
+                      'Ebay Price ',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    Text(
+                      'Amazon Price ',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    widget.cardinfo.cardPrices.cardmarketPrice,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  Text(
+                    widget.cardinfo.cardPrices.tcgplayerPrice,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  Text(
+                    widget.cardinfo.cardPrices.ebayPrice,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  Text(
+                    widget.cardinfo.cardPrices.amazonPrice,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(right: 15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Attack ',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        'Deff ',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        'Attribute ',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "${widget.cardinfo.cardPrices.cardmarketPrice}",
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    Text(
+                      "${widget.cardinfo.def}",
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    Text(
+                      "${widget.cardinfo.attribute}",
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -174,25 +323,31 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top:20),
+            padding: const EdgeInsets.only(top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   'Description ',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 14.0,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
                 Text(
-                  widget.cardinfo.desc,
+                  "${widget.cardinfo.desc}",
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.w300,
                   ),
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Image.network(
+              widget.cardinfo.cardImages[0].imageUrl,
             ),
           )
         ],
@@ -207,7 +362,7 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
-                expandedHeight: 200.0,
+                expandedHeight: 400.0,
                 floating: false,
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
