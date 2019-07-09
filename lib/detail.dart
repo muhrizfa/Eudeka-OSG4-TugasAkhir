@@ -54,13 +54,13 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    Text(
-                      'Archtype ',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
+                    // Text(
+                    //   'Archtype ',
+                    //   style: TextStyle(
+                    //     fontSize: 14.0,
+                    //     fontWeight: FontWeight.w800,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -81,80 +81,80 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                       fontWeight: FontWeight.w300,
                     ),
                   ),
-                  Text(
-                    widget.cardinfo.archetype,
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
+                  // Text(
+                  //   widget.cardinfo.archetype,
+                  //   style: TextStyle(
+                  //     fontSize: 14.0,
+                  //     fontWeight: FontWeight.w300,
+                  //   ),
+                  // ),
                 ],
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'Attack ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      Text(
-                        'Deff ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      Text(
-                        'Attribute ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "${widget.cardinfo.atk}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    Text(
-                      "${widget.cardinfo.def}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    Text(
-                      "${widget.cardinfo.attribute}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 10.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: <Widget>[
+          //       Padding(
+          //         padding: const EdgeInsets.only(right: 15.0),
+          //         child: Column(
+          //           crossAxisAlignment: CrossAxisAlignment.start,
+          //           children: <Widget>[
+          //             // Text(
+          //             //   'Attack ',
+          //             //   style: TextStyle(
+          //             //     fontSize: 14.0,
+          //             //     fontWeight: FontWeight.w800,
+          //             //   ),
+          //             // ),
+          //             // Text(
+          //             //   'Deff ',
+          //             //   style: TextStyle(
+          //             //     fontSize: 14.0,
+          //             //     fontWeight: FontWeight.w800,
+          //             //   ),
+          //             // ),
+          //             // Text(
+          //             //   'Attribute ',
+          //             //   style: TextStyle(
+          //             //     fontSize: 14.0,
+          //             //     fontWeight: FontWeight.w800,
+          //             //   ),
+          //             // ),
+          //           ],
+          //         ),
+          //       ),
+          //       Column(
+          //         crossAxisAlignment: CrossAxisAlignment.start,
+          //         children: <Widget>[
+          //           Text(
+          //             "${widget.cardinfo.atk}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //           Text(
+          //             "${widget.cardinfo.def}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //           Text(
+          //             "${widget.cardinfo.attribute}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Column(
@@ -259,69 +259,69 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'Attack ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      Text(
-                        'Deff ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      Text(
-                        'Attribute ',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "${widget.cardinfo.cardPrices.cardmarketPrice}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    Text(
-                      "${widget.cardinfo.def}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    Text(
-                      "${widget.cardinfo.attribute}",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 10.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: <Widget>[
+          //       Padding(
+          //         padding: const EdgeInsets.only(right: 15.0),
+          //         child: Column(
+          //           crossAxisAlignment: CrossAxisAlignment.start,
+          //           children: <Widget>[
+          //             Text(
+          //               'Attack ',
+          //               style: TextStyle(
+          //                 fontSize: 14.0,
+          //                 fontWeight: FontWeight.w800,
+          //               ),
+          //             ),
+          //             Text(
+          //               'Deff ',
+          //               style: TextStyle(
+          //                 fontSize: 14.0,
+          //                 fontWeight: FontWeight.w800,
+          //               ),
+          //             ),
+          //             Text(
+          //               'Attribute ',
+          //               style: TextStyle(
+          //                 fontSize: 14.0,
+          //                 fontWeight: FontWeight.w800,
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Column(
+          //         crossAxisAlignment: CrossAxisAlignment.start,
+          //         children: <Widget>[
+          //           Text(
+          //             "${widget.cardinfo.atk}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //           Text(
+          //             "${widget.cardinfo.def}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //           Text(
+          //             "${widget.cardinfo.attribute}",
+          //             style: TextStyle(
+          //               fontSize: 14.0,
+          //               fontWeight: FontWeight.w300,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Column(
