@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:yugioh/home.dart';
 
-
 final appTitle = 'Yu-Gi-Oh! Card Deck';
 
 void main() => runApp(MyApp());
@@ -16,8 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
-        primaryColor: const Color(0xFF3B4254)
-      ),
+          brightness: Brightness.dark,
+          accentColor: Colors.cyan[600],
+          primaryColor: const Color(0xFF3B4254)),
       home: MyHomePage(title: appTitle),
       debugShowCheckedModeBanner: false,
     );
