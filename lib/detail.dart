@@ -186,7 +186,7 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                   ),
                 ),
                 Text(
-                  "${widget.cardinfo.desc}",
+                  widget.cardinfo.desc,
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.w300,
