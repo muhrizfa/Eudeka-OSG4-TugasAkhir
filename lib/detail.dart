@@ -344,12 +344,6 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Image.network(
-              widget.cardinfo.cardImages[0].imageUrl,
-            ),
-          )
         ],
       ),
     );
@@ -362,7 +356,7 @@ class DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
-                expandedHeight: 400.0,
+                expandedHeight: 500.0,
                 floating: false,
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
